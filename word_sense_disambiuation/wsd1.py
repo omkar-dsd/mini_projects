@@ -73,6 +73,8 @@ def simpleFilter(sentence):
                 	# for i in synonymsCreator(w):
                 	# 	filtered_sent.append(i)
 	return filtered_sent
+
+
 if __name__ == '__main__':
 
 	cricfile = codecs.open("cricketbat.txt", 'r', "utf-8")
@@ -81,11 +83,10 @@ if __name__ == '__main__':
 	sent1 = vampirefile.read().lower()
 	sent3 = "start"
 
-	# FOR TEST
+	# FOR TEST , replace the above variables with below sent1 and sent 2
 	# sent1 = "the commercial banks are used for finance. all the financial matters are managed by financial banks and they have lots of money, user accounts like salary account and savings account, current account. money can also be withdrawn from this bank."
 	# sent2 = "the river bank has water in it and it has fishes trees . lots of water is stored in the banks. boats float in it and animals come and drink water from it."
 	# sent3 = "from which bank should i withdraw money"
-
 
 	while(sent3 != "end"):
 
@@ -114,13 +115,9 @@ if __name__ == '__main__':
 				counter2 = counter2 + 1
 				sent32_similarity = sent32_similarity + simlilarityCheck(i,j)
 
-		# similarity_avg31 = sent31_similarity/counter1
-		# similarity_avg32 = sent32_similarity/counter2
-
 		filtered_sent1 = []
 		filtered_sent2 = []
 		filtered_sent3 = []
-
 
 		filtered_sent1 = filteredSentence(sent1)
 		filtered_sent2 = filteredSentence(sent2)
@@ -144,9 +141,6 @@ if __name__ == '__main__':
 			print "Mammal Bat"
 		else:
 			print "Cricket Bat"
-
-
-		#---------------------------------------------
 
 		#-----------------------------------------------
 		#Sentence1: the river bank has water in it and it has fishes trees . lots of water is stored in the banks. boats float in it and animals come and drink water from it.
